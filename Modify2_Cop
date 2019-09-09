@@ -10,9 +10,9 @@ function OpenCloakroomMenu()
 
 	local elements = {
 		{ label = _U('citizen_wear'), value = 'citizen_wear' },
-		{ label = _U('gign_wear'), value = 'gign_wear'},
-		{ label = _U('hide_wear'), value = 'hide_wear'},
+		{ label = 'Tenue du Swat', value = 'gign_wear'},
+		{ label = 'Tenue sous Couvertue', value = 'hide_wear'},
 		{ label = _U('gilet_wear'), value = 'gilet_wear' },
 		{ label = _U('bullet_wear'), value = 'bullet_wear' },
-		{ label = _U('cap_wear'), value = 'cap_wear' }
+		{ label = 'Casquette de Police', value = 'cap_wear' }
 	}
