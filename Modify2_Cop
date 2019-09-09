@@ -10,9 +10,32 @@ function OpenCloakroomMenu()
 
 	local elements = {
 		{ label = _U('citizen_wear'), value = 'citizen_wear' },
-		{ label = 'Tenue du Swat', value = 'gign_wear'},
-		{ label = 'Tenue sous Couvertue', value = 'hide_wear'},
 		{ label = _U('gilet_wear'), value = 'gilet_wear' },
 		{ label = _U('bullet_wear'), value = 'bullet_wear' },
 		{ label = 'Casquette de Police', value = 'cap_wear' }
 	}
+
+	if grade == 'recruit' then
+		table.insert(elements, {label = _U('police_wear'), value = 'recruit_wear'})
+	elseif grade == 'officer' then
+		table.insert(elements, {label = _U('police_wear'), value = 'officer_wear'})
+	elseif grade == 'sergeant' then
+		table.insert(elements, {label = _U('police_wear'), value = 'sergeant_wear'})
+		table.insert(elements, { label = 'Tenue sous Couvertue', value = 'hide_wear'})
+	elseif grade == 'intendent' then
+		table.insert(elements, {label = _U('police_wear'), value = 'intendent_wear'})
+		table.insert(elements, { label = 'Tenue du Swat', value = 'gign_wear'})
+		table.insert(elements, { label = 'Tenue sous Couvertue', value = 'hide_wear'})
+	elseif grade == 'lieutenant' then
+		table.insert(elements, {label = _U('police_wear'), value = 'lieutenant_wear'})
+		table.insert(elements, { label = 'Tenue du Swat', value = 'gign_wear'})
+		table.insert(elements, { label = 'Tenue sous Couvertue', value = 'hide_wear'})
+	elseif grade == 'chef' then
+		table.insert(elements, {label = _U('police_wear'), value = 'chef_wear'})
+		table.insert(elements, { label = 'Tenue du Swat', value = 'gign_wear'})
+		table.insert(elements, { label = 'Tenue sous Couvertue', value = 'hide_wear'})
+	elseif grade == 'boss' then
+		table.insert(elements, {label = _U('police_wear'), value = 'boss_wear'})
+		table.insert(elements, { label = 'Tenue du Swat', value = 'gign_wear'})
+		table.insert(elements, { label = 'Tenue sous Couvertue', value = 'hide_wear'})
+	end
